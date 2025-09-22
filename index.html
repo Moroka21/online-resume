@@ -46,7 +46,7 @@
                     <h2>About Me</h2>
                 </div>
                 <div class="about-container fade-in">
-                    <p>I am a passionate and results-driven <span class="highlight">Bachelor of Science in Information Technology</span> student. With a strong foundation in programming, data analysis, and systems design, I have developed skills in languages such as <span class="highlight">Python, C#, C++, Java, and SQL</span>.</p>
+                    <p>I am a passionate and results-driven Bachelor of Science in Information Technology student. With a strong foundation in programming, data analysis, and systems design, I have developed skills in languages such as Python, C#, C++, Java, and SQL.</p>
                     <p>I thrive in high-pressure environments and am a proactive team player with excellent multitasking skills. I am committed to continuous learning, staying current with emerging technologies, and adapting quickly to new challenges.</p>
                     <p>My goal is to contribute to impactful projects, collaborate with talented teams, and enhance my expertise in the field of Information Technology.</p>
                 </div>
@@ -141,12 +141,12 @@
                         <p class="date">Kgagatlou Secondary School | Jan 2019 - Nov 2019</p>
                     </div>
                     <div class="card fade-in">
-                        <h3><i class="fas fa-certificate"></i> Google Certifications</h3>
+                        <h3><i class="fas fa-certificate"></i> Certifications</h3>
                         <ul>
-                            <li>Foundations of Cybersecurity</li>
-                            <li>Connect and Protect: Networks and Network Security</li>
-                            <li>Play It Safe: Manage Security Risks</li>
-                            <li>Tools of the Trade: Linux and SQL</li>
+                            <li><a href="https://www.coursera.org/account/accomplishments/records/FPHUYK97OWM2" target="_blank">Foundations of Cybersecurity (Google)</a></li>
+                            <li><a href="https://coursera.org/share/1e2777b1b8af3875cea0eba7b6fbee20" target="_blank">Connect and Protect: Networks and Network Security (Google)</a></li>
+                            <li><a href="https://coursera.org/share/94eb1e02ba303595dae864f22aaf71e0" target="_blank">Play It Safe: Manage Security Risks (Google)</a></li>
+                            <li><a href="https://www.coursera.org/account/accomplishments/records/NEO3G1XR0737" target="_blank">Tools of the Trade: Linux and SQL (Google)</a></li>
                         </ul>
                     </div>
                     <div class="card fade-in">
@@ -333,7 +333,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Location</h4>
-                                <p>10 New York Avenue, Mahlasedi Park, Polokwane, limpopo, South Africa</p>
+                                <p>10 New York Avenue, Mahlasedi Park, Polokwane, Limpopo, South Africa</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -368,9 +368,9 @@
                         <h3>Let's Connect</h3>
                         <p>Feel free to reach out to me via email or connect with me on social media.</p>
                         <div class="social-links contact-social">
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                            <a href="#"><i class="fab fa-Instagram"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/moroamofo/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -383,9 +383,9 @@
             <h3>Mohomotsi Moroamofo Mphahlele</h3>
             <p>IT Student & Aspiring Developer</p>
             <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-Instagram"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/moroamofo/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Mohomotsi Moroamofo Mphahlele. All Rights Reserved.</p>
@@ -400,18 +400,21 @@
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const darkModeIcon = darkModeToggle.querySelector('i');
-        
+
         if (localStorage.getItem('darkMode') === 'enabled') {
             document.body.classList.add('dark-mode');
             darkModeIcon.classList.remove('fa-moon');
             darkModeIcon.classList.add('fa-sun');
         } else {
-            document.body.classList.add('dark-mode');
+            // set default: light mode
+            document.body.classList.remove('dark-mode');
+            darkModeIcon.classList.remove('fa-sun');
+            darkModeIcon.classList.add('fa-moon');
         }
-        
+
         darkModeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            
+
             if (document.body.classList.contains('dark-mode')) {
                 darkModeIcon.classList.remove('fa-moon');
                 darkModeIcon.classList.add('fa-sun');
@@ -424,7 +427,7 @@
         });
 
         const backToTopButton = document.getElementById('backToTop');
-        
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.add('show');
@@ -442,12 +445,12 @@
         });
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -459,18 +462,18 @@
         });
 
         const animateElements = document.querySelectorAll('.fade-in');
-        
+
         const checkIfInView = () => {
             animateElements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
                 const elementVisible = 150;
-                
+
                 if (elementTop < window.innerHeight - elementVisible) {
                     element.classList.add('appear');
                 }
             });
         };
-        
+
         const initSkillBars = () => {
             const skillBars = document.querySelectorAll('.skill-progress');
             skillBars.forEach(bar => {
@@ -478,17 +481,17 @@
                 bar.style.width = width;
             });
         };
-        
+
         window.addEventListener('load', () => {
             checkIfInView();
             setTimeout(initSkillBars, 500);
         });
-        
+
         window.addEventListener('scroll', checkIfInView);
 
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
-        
+
         if (mobileMenuBtn) {
             mobileMenuBtn.addEventListener('click', () => {
                 navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
@@ -498,8 +501,6 @@
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 navLinks.style.display = 'flex';
-            } else {
-                navLinks.style.display = 'none';
             }
         });
     </script>
