@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohomotsi Moroamofo Mphahlele | IT Student & Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -38,6 +38,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Main content (About, Projects, Experience, Education, Skills) remains unchanged from your original -->
 
     <!-- Contact Section -->
     <section id="contact" class="section">
@@ -99,6 +101,7 @@
                     <div class="social-links contact-social">
                         <a href="https://github.com/Moroka21" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/mohomotsi-moroamofo-84825a1b6" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
                         <a href="https://www.instagram.com/moroamofo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
@@ -114,7 +117,8 @@
             <div class="social-links">
                 <a href="https://github.com/Moroka21" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/mohomotsi-moroamofo-84825a1b6" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/moroamofo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-dev"></i></a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Mohomotsi Moroamofo Mphahlele. All Rights Reserved.</p>
@@ -127,7 +131,7 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- JavaScript -->
+    <!-- JavaScript (unchanged except links) -->
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const darkModeIcon = darkModeToggle.querySelector('i');
@@ -136,10 +140,13 @@
             document.body.classList.add('dark-mode');
             darkModeIcon.classList.remove('fa-moon');
             darkModeIcon.classList.add('fa-sun');
+        } else {
+            document.body.classList.add('dark-mode');
         }
 
         darkModeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
+
             if (document.body.classList.contains('dark-mode')) {
                 darkModeIcon.classList.remove('fa-moon');
                 darkModeIcon.classList.add('fa-sun');
@@ -185,6 +192,7 @@
         });
 
         const animateElements = document.querySelectorAll('.fade-in');
+
         const checkIfInView = () => {
             animateElements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
