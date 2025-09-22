@@ -74,6 +74,7 @@ img {
     font-size: 2.5rem;
     display: inline-block;
     padding-bottom: 15px;
+    /* ensure visible in dark mode: override if needed */
 }
 
 .section-title h2::after {
@@ -225,27 +226,6 @@ header {
     padding: 40px;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-    margin-bottom: 50px;
-}
-
-.about-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.highlight {
-    background-color: var(--accent-color);
-    color: white;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
     margin-bottom: 50px;
 }
 
@@ -639,6 +619,7 @@ footer {
     transform: translateY(0);
 }
 
+/* Dark Mode Styles */
 body.dark-mode {
     background-color: #0f172a;
     color: #e2e8f0;
@@ -666,14 +647,26 @@ body.dark-mode .section-title h2 {
     color: #e2e8f0;
 }
 
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4 {
+    color: #e2e8f0;
+}
+
 body.dark-mode header {
     background-color: #1e293b;
+}
+
+body.dark-mode .nav-links a {
+    color: #e2e8f0;
 }
 
 body.dark-mode .dark-mode-toggle {
     color: #e2e8f0;
 }
 
+/* Responsive Media Queries */
 @media (max-width: 992px) {
     .timeline::after {
         left: 31px;
