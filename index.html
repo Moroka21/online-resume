@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mohomotsi Moroamofo Mphahlele | IT Student & Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Base tag to fix relative URLs on GitHub Pages -->
+    <base href="/online-resume/" />
+    
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Your stylesheet -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
@@ -39,9 +46,8 @@
         </div>
     </section>
 
-    <!-- Main content (About, Projects, Experience, Education, Skills) remains unchanged from your original -->
+    <!-- Main content (About, Projects, Experience, Education, Skills) remains unchanged -->
 
-    <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
             <div class="section-title">
@@ -102,14 +108,12 @@
                         <a href="https://github.com/Moroka21" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/mohomotsi-moroamofo-84825a1b6" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
                         <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/moroamofo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <h3>Mohomotsi Moroamofo Mphahlele</h3>
@@ -126,12 +130,10 @@
         </div>
     </footer>
 
-    <!-- Back to Top -->
     <a href="#" class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- JavaScript (unchanged except links) -->
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const darkModeIcon = darkModeToggle.querySelector('i');
@@ -141,7 +143,9 @@
             darkModeIcon.classList.remove('fa-moon');
             darkModeIcon.classList.add('fa-sun');
         } else {
-            document.body.classList.add('dark-mode');
+            document.body.classList.remove('dark-mode');
+            darkModeIcon.classList.remove('fa-sun');
+            darkModeIcon.classList.add('fa-moon');
         }
 
         darkModeToggle.addEventListener('click', () => {
@@ -177,7 +181,7 @@
         });
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
