@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Mohomotsi Moroamofo Mphahlele | IT Student & Developer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <header>
@@ -38,8 +38,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Main content (About, Projects, Experience, Education, Skills) remains unchanged from your original -->
 
     <!-- Contact Section -->
     <section id="contact" class="section">
@@ -113,12 +111,11 @@
         <div class="footer-content">
             <h3>Mohomotsi Moroamofo Mphahlele</h3>
             <p>IT Student & Aspiring Developer</p>
-  <div class="social-links">
-    <a href="https://github.com/Moroka21" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/mohomotsi-moroamofo-84825a1b6" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-    <a href="https://www.instagram.com/moroamofo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
- </div>
-
+            <div class="social-links">
+                <a href="https://github.com/Moroka21" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mohomotsi-moroamofo-84825a1b6" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/moroamofo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 Mohomotsi Moroamofo Mphahlele. All Rights Reserved.</p>
             </div>
@@ -130,22 +127,19 @@
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- JavaScript (unchanged except links) -->
+    <!-- JavaScript -->
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const darkModeIcon = darkModeToggle.querySelector('i');
-        
+
         if (localStorage.getItem('darkMode') === 'enabled') {
             document.body.classList.add('dark-mode');
             darkModeIcon.classList.remove('fa-moon');
             darkModeIcon.classList.add('fa-sun');
-        } else {
-            document.body.classList.add('dark-mode');
         }
-        
+
         darkModeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            
             if (document.body.classList.contains('dark-mode')) {
                 darkModeIcon.classList.remove('fa-moon');
                 darkModeIcon.classList.add('fa-sun');
@@ -158,7 +152,7 @@
         });
 
         const backToTopButton = document.getElementById('backToTop');
-        
+
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 300) {
                 backToTopButton.classList.add('show');
@@ -191,7 +185,6 @@
         });
 
         const animateElements = document.querySelectorAll('.fade-in');
-        
         const checkIfInView = () => {
             animateElements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
@@ -201,7 +194,7 @@
                 }
             });
         };
-        
+
         const initSkillBars = () => {
             const skillBars = document.querySelectorAll('.skill-progress');
             skillBars.forEach(bar => {
@@ -209,15 +202,13 @@
                 bar.style.width = width;
             });
         };
-        
+
         window.addEventListener('load', () => {
             checkIfInView();
             setTimeout(initSkillBars, 500);
         });
-        
+
         window.addEventListener('scroll', checkIfInView);
     </script>
 </body>
 </html>
-
-
