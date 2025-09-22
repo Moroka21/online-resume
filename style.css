@@ -1,744 +1,517 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #f59e0b;
-    --light-color: #f8fafc;
-    --dark-color: #0f172a;
-    --text-color: #1e293b;
-    --text-light: #64748b;
-    --bg-color: #f1f5f9;
-    --card-bg: #ffffff;
-    --transition: all 0.3s ease;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --radius: 12px;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-    overflow-x: hidden;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 0.5em;
-    line-height: 1.2;
-    color: var(--dark-color);
-}
-
-p {
-    margin-bottom: 1em;
-}
-
-a {
-    text-decoration: none;
-    color: var(--primary-color);
-    transition: var(--transition);
-}
-
-a:hover {
-    color: var(--secondary-color);
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section {
-    padding: 80px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.section-title h2 {
-    font-size: 2.5rem;
-    display: inline-block;
-    padding-bottom: 15px;
-}
-
-.section-title h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: var(--primary-color);
-    border-radius: 2px;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 12px 28px;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: var(--transition);
-    border: none;
-    cursor: pointer;
-    text-align: center;
-}
-
-.btn:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-hover);
-}
-
-.btn-outline {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
-.btn-outline:hover {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-header {
-    background-color: var(--card-bg);
-    box-shadow: var(--shadow);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--secondary-color);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links a {
-    color: var(--text-color);
-    font-weight: 500;
-    position: relative;
-    padding: 5px 0;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: var(--transition);
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-.dark-mode-toggle {
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    margin-left: 20px;
-    color: var(--text-color);
-}
-
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(30, 64, 175, 0.9)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding-top: 80px;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-.hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    font-weight: 300;
-    opacity: 0.9;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.about-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    background-color: var(--card-bg);
-    padding: 40px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    margin-bottom: 50px;
-}
-
-.about-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
-}
-
-.highlight {
-    background-color: var(--accent-color);
-    color: white;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-.card {
-    background-color: var(--card-bg);
-    border-radius: var(--radius);
-    padding: 30px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-}
-
-.card h3 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-}
-
-.card h3 i {
-    margin-right: 10px;
-    font-size: 1.3rem;
-}
-
-.card p {
-    margin-bottom: 15px;
-}
-
-.timeline {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: var(--primary-color);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -2px;
-}
-
-.timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    width: 50%;
-    box-sizing: border-box;
-}
-
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: var(--card-bg);
-    border: 4px solid var(--primary-color);
-    border-radius: 50%;
-    top: 15px;
-    z-index: 1;
-}
-
-.left {
-    left: 0;
-}
-
-.right {
-    left: 50%;
-}
-
-.left::after {
-    right: -12px;
-}
-
-.right::after {
-    left: -12px;
-}
-
-.timeline-content {
-    padding: 25px;
-    background-color: var(--card-bg);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    position: relative;
-    transition: var(--transition);
-}
-
-.timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-}
-
-.timeline-content h4 {
-    color: var(--secondary-color);
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-}
-
-.timeline-content .date {
-    color: var(--primary-color);
-    font-weight: 600;
-    margin-bottom: 15px;
-    display: block;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.timeline-content ul {
-    padding-left: 20px;
-    margin-bottom: 0;
-}
-
-.timeline-content li {
-    margin-bottom: 8px;
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.skill-category h3 {
-    margin-bottom: 20px;
-    color: var(--secondary-color);
-    display: flex;
-    align-items: center;
-}
-
-.skill-category h3 i {
-    margin-right: 10px;
-    color: var(--primary-color);
-}
-
-.skill-list {
-    list-style: none;
-}
-
-.skill-item {
-    margin-bottom: 15px;
-}
-
-.skill-name {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-.skill-bar {
-    height: 8px;
-    background-color: #e2e8f0;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.skill-progress {
-    height: 100%;
-    background-color: var(--primary-color);
-    border-radius: 4px;
-    width: 0;
-    transition: width 1.5s ease-in-out;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    background-color: var(--card-bg);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-hover);
-}
-
-.project-img {
-    height: 200px;
-    background-color: #cbd5e1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-light);
-    font-size: 1.2rem;
-}
-
-.project-content {
-    padding: 25px;
-}
-
-.project-content h3 {
-    margin-bottom: 15px;
-    color: var(--secondary-color);
-}
-
-.project-content p {
-    margin-bottom: 20px;
-    color: var(--text-color);
-}
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-}
-
-.tag {
-    background-color: #dbeafe;
-    color: var(--primary-color);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
-    background-color: var(--card-bg);
-    padding: 40px;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-}
-
-.contact-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-}
-
-.contact-icon {
-    width: 50px;
-    height: 50px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-    flex-shrink: 0;
-}
-
-.contact-text h4 {
-    margin-bottom: 5px;
-    color: var(--secondary-color);
-}
-
-.contact-form .form-group {
-    margin-bottom: 20px;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: var(--dark-color);
-}
-
-.form-control {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #cbd5e1;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: var(--transition);
-}
-
-.form-control:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-}
-
-textarea.form-control {
-    min-height: 150px;
-    resize: vertical;
-}
-
-footer {
-    background-color: var(--dark-color);
-    color: white;
-    text-align: center;
-    padding: 40px 0;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 30px 0;
-}
-
-.social-links a {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-    transition: var(--transition);
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-5px);
-}
-
-.footer-bottom {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.9rem;
-    color: #94a3b8;
-}
-
-.back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--primary-color);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 1.2rem;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.back-to-top.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.back-to-top:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-5px);
-}
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.fade-in.appear {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-body.dark-mode {
-    background-color: #0f172a;
-    color: #e2e8f0;
-}
-
-body.dark-mode .card,
-body.dark-mode .about-container,
-body.dark-mode .contact-container,
-body.dark-mode .timeline-content {
-    background-color: #1e293b;
-    color: #e2e8f0;
-}
-
-body.dark-mode .skill-bar {
-    background-color: #334155;
-}
-
-body.dark-mode .form-control {
-    background-color: #334155;
-    color: #e2e8f0;
-    border-color: #475569;
-}
-
-body.dark-mode .section-title h2 {
-    color: #e2e8f0;
-}
-
-body.dark-mode header {
-    background-color: #1e293b;
-}
-
-body.dark-mode .dark-mode-toggle {
-    color: #e2e8f0;
-}
-
-@media (max-width: 992px) {
-    .timeline::after {
-        left: 31px;
-    }
-
-    .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    .timeline-item::after {
-        left: 21px;
-    }
-
-    .left::after, .right::after {
-        left: 21px;
-    }
-
-    .right {
-        left: 0%;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-        background: none;
-        border: none;
-        color: var(--text-color);
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-
-    .project-grid,
-    .skills-container,
-    .cards-container {
-        grid-template-columns: 1fr;
-    }
-
-    .section {
-        padding: 60px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn {
-        width: 100%;
-        max-width: 300px;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohomotsi Moroamofo Mphahlele | IT Student & Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Mohomotsi Mphahlele</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <button class="dark-mode-toggle" id="darkModeToggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Mohomotsi Moroamofo Mphahlele</h1>
+            <p class="hero-subtitle">IT Student & Aspiring Developer</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn">Get In Touch</a>
+                <a href="#projects" class="btn btn-outline">View My Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-container fade-in">
+                    <p>I am a passionate and results-driven <span class="highlight">Bachelor of Science in Information Technology</span> student. With a strong foundation in programming, data analysis, and systems design, I have developed skills in languages such as <span class="highlight">Python, C#, C++, Java, and SQL</span>.</p>
+                    <p>I thrive in high-pressure environments and am a proactive team player with excellent multitasking skills. I am committed to continuous learning, staying current with emerging technologies, and adapting quickly to new challenges.</p>
+                    <p>My goal is to contribute to impactful projects, collaborate with talented teams, and enhance my expertise in the field of Information Technology.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>My Projects</h2>
+                </div>
+                <div class="project-grid">
+                    <div class="project-card fade-in">
+                        <div class="project-img">
+                            <i class="fas fa-solar-panel"></i> Solar Tech Solutions
+                        </div>
+                        <div class="project-content">
+                            <h3>Solar Tech. Solutions</h3>
+                            <p>A web-based platform designed to streamline solar installation services. It enables customers to book appointments, request quotes, and track project progress through a user-friendly interface.</p>
+                            <p>The system enhances business efficiency by automating task assignments, monitoring project milestones and budgets, and storing service history and client data for analytics.</p>
+                            <div class="project-tags">
+                                <span class="tag">Web Development</span>
+                                <span class="tag">Project Management</span>
+                                <span class="tag">UI/UX Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card fade-in">
+                        <div class="project-img">
+                            <i class="fas fa-car"></i> ABCRental System
+                        </div>
+                        <div class="project-content">
+                            <h3>ABCRental Vehicle Management System</h3>
+                            <p>A vehicle rental company project aiming to modernize operations by replacing manual systems with an automated, database-driven platform.</p>
+                            <p>The project focuses on improving rental efficiency, fleet management, customer service, and financial transactions through a comprehensive digital solution.</p>
+                            <div class="project-tags">
+                                <span class="tag">Database Design</span>
+                                <span class="tag">System Architecture</span>
+                                <span class="tag">C#</span>
+                                <span class="tag">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Professional Experience</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item left fade-in">
+                        <div class="timeline-content">
+                            <h4>Student Assistant</h4>
+                            <span class="date">Aug 2024 - Nov 2024</span>
+                            <ul>
+                                <li>Assist students with study skills and exam preparation.</li>
+                                <li>Enhance communication between lecturers and students.</li>
+                                <li>Support students' digital literacy skills.</li>
+                                <li>Guide students to university tech support services.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item right fade-in">
+                        <div class="timeline-content">
+                            <h4>Digital Marketing Skills Training Program</h4>
+                            <span class="date">May 2024 - Sep 2024</span>
+                            <ul>
+                                <li>Learned e-Commerce site management and development tools.</li>
+                                <li>Explored different e-commerce application types.</li>
+                                <li>Studied web design principles for e-Commerce platforms.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Education & Certifications</h2>
+                </div>
+                <div class="cards-container">
+                    <div class="card fade-in">
+                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <h4>Bachelor of Science in Information Technology</h4>
+                        <p class="date">North West University | Jan 2023 - Nov 2025</p>
+                        <h4>National Senior Certificate</h4>
+                        <p class="date">Kgagatlou Secondary School | Jan 2019 - Nov 2019</p>
+                    </div>
+                    <div class="card fade-in">
+                        <h3><i class="fas fa-certificate"></i> Google Certifications</h3>
+                        <ul>
+                            <li>Foundations of Cybersecurity</li>
+                            <li>Connect and Protect: Networks and Network Security</li>
+                            <li>Play It Safe: Manage Security Risks</li>
+                            <li>Tools of the Trade: Linux and SQL</li>
+                        </ul>
+                    </div>
+                    <div class="card fade-in">
+                        <h3><i class="fas fa-book"></i> Relevant Coursework</h3>
+                        <ul>
+                            <li>ACCS111 - Financial Accountancy (Special)</li>
+                            <li>ACCS121 - Financial Accounting (Special)</li>
+                            <li>CMPG111 - Introduction to Computing and Programming</li>
+                            <li>MTHS113 - Basic Mathematical Techniques</li>
+                            <li>CMPG121 - Structured Programming</li>
+                            <li>MTHS225 - Discrete Mathematics</li>
+                            <li>CMPG122 - User Interface Programming I</li>
+                            <li>STTN111 - Descriptive Statistics</li>
+                            <li>BMAN111 - Introduction to Business Management</li>
+                            <li>ALDE111 - Academic Literacy Development 1 - English</li>
+                            <li>STTN121 - Intro Statistical Inference I</li>
+                            <li>BMAN223 - Problem Solving for Managers</li>
+                            <li>WVNS211 - Understanding the Natural World</li>
+                            <li>WVNS221 - Understanding the Natural World</li>
+                            <li>ALDE122 - Academic Literacy Development - English</li>
+                            <li>CMPG212 - Apps & Advanced User Interface Programming</li>
+                            <li>CMPG211 - Object-Oriented Programming</li>
+                            <li>CMPG213 - System Analysis and Design 1</li>
+                            <li>CMPG312 - Decision Support Systems 1</li>
+                            <li>CMPG214 - Communication Skills</li>
+                            <li>CMPG215 - Information Security</li>
+                            <li>CMPG223 - System Analysis and Design 2</li>
+                            <li>CMPG322 - Decision Support Systems 2</li>
+                            <li>CMPG221 - Data Structures and Algorithms</li>
+                            <li>CMPG222 - Data Analytics 2</li>
+                            <li>CMPG311 - Databases (Oracle & SQL)</li>
+                            <li>CMPG313 - Artificial Intelligence</li>
+                            <li>CMPG315 - Computer Networks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Technical Skills</h2>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-category card fade-in">
+                        <h3><i class="fas fa-laptop-code"></i> Programming Languages</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item">
+                                <div class="skill-name">
+                                    <span>Python</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-name">
+                                    <span>Java</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-name">
+                                    <span>C++</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-name">
+                                    <span>C#</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-name">
+                                    <span>SQL</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category card fade-in">
+                        <h3><i class="fas fa-tools"></i> Technical Skills</h3>
+                        <ul class="skill-list">
+                            <li class="skill-item">
+                                <div class="skill-name">
+                                    <span>Web Development (HTML, CSS)</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-name">
+                                    <span>Data Analytics</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-name">
+                                    <span>Microsoft Office Suite</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-name">
+                                    <span>Visual Studio</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-name">
+                                    <span>Windows & Linux</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-name">
+                                    <span>GitHub</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category card fade-in">
+                        <h3><i class="fas fa-star"></i> Core Competencies</h3>
+                        <ul class="skill-list">
+                            <li>Effective Communication</li>
+                            <li>Team Collaboration</li>
+                            <li>Time Management</li>
+                            <li>Problem Solving</li>
+                            <li>Attention To Detail</li>
+                            <li>Adaptability</li>
+                            <li>Continuous Learning</li>
+                            <li>Multitasking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Get In Touch</h2>
+                </div>
+                <div class="contact-container fade-in">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>10 New York Avenue, Mahlasedi Park, Polokwane</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:moroamofo11@gmail.com">moroamofo11@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p><a href="tel:+27731862463">073 186 2463</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>University</h4>
+                                <p>North West University</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Portfolio</h4>
+                                <p><a href="https://moroka21.github.io/online-resume/" target="_blank" rel="noopener noreferrer">moroka21.github.io/online-resume</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-cta">
+                        <h3>Let's Connect</h3>
+                        <p>Feel free to reach out to me via email or connect with me on social media.</p>
+                        <div class="social-links contact-social">
+                            <a href="https://github.com/Moroka21" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/mohomotsi-moroamofo-84825a1b6" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/moroamofo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Mohomotsi Moroamofo Mphahlele</h3>
+            <p>IT Student & Aspiring Developer</p>
+            <div class="social-links">
+                <a href="https://github.com/Moroka21" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mohomotsi-moroamofo-84825a1b6" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/moroamofo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-dev"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mohomotsi Moroamofo Mphahlele. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeIcon = darkModeToggle.querySelector('i');
+        
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            darkModeIcon.classList.remove('fa-moon');
+            darkModeIcon.classList.add('fa-sun');
+        } else {
+            document.body.classList.add('dark-mode');
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                darkModeIcon.classList.remove('fa-moon');
+                darkModeIcon.classList.add('fa-sun');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                darkModeIcon.classList.remove('fa-sun');
+                darkModeIcon.classList.add('fa-moon');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        const animateElements = document.querySelectorAll('.fade-in');
+        
+        const checkIfInView = () => {
+            animateElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('appear');
+                }
+            });
+        };
+        
+        const initSkillBars = () => {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = width;
+            });
+        };
+        
+        window.addEventListener('load', () => {
+            checkIfInView();
+            setTimeout(initSkillBars, 500);
+        });
+        
+        window.addEventListener('scroll', checkIfInView);
+
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navLinks.style.display = 'flex';
+            } else {
+                navLinks.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
