@@ -26,14 +26,14 @@ I have a strong foundation in **programming, databases, data analysis, informati
 **University of Limpopo**  
 **2026 – Present**
 
-Relevant coursework:
+**Relevant Coursework**
 - Artificial Intelligence
 - Databases
 - Computer Networks
 - Computer Security
 
-**Research Project:**  
-*Investigating Data Poisoning Attacks on AI-Driven Intrusion Detection Systems in Crime Intelligence Applications*
+**Research Project**  
+Investigating Data Poisoning Attacks on AI-Driven Intrusion Detection Systems in Crime Intelligence Applications.
 
 ---
 
@@ -41,7 +41,7 @@ Relevant coursework:
 **North-West University**  
 **2023 – 2025**
 
-Relevant coursework:
+**Relevant Coursework**
 - Structured Programming
 - Object-Oriented Programming
 - Data Structures and Algorithms
@@ -57,11 +57,38 @@ Relevant coursework:
 
 ## Work Experience
 
+### 💼 Computer Lab Assistant
+**Department of Computer Science, University of Limpopo**  
+**2026 – Present**
+
+Supporting the effective operation and management of university computer laboratories while assisting students with technical and software-related issues.
+
+**Responsibilities**
+- Assist students with technical computer-related problems
+- Support management of computer laboratories alongside Senior Lab Assistants
+- Assist with technical maintenance and troubleshooting of laboratory equipment
+- Report and document computer-related faults and incidents
+- Safeguard laboratory equipment and peripherals
+- Enforce computer laboratory policies and rules
+- Monitor laboratory usage and ensure proper functionality
+- Provide assistance during practical lessons, tutorials, and assessments
+
+**Skills Applied**
+- Computer hardware and software troubleshooting
+- Microsoft Office applications
+- C++
+- Java
+- Communication and interpersonal skills
+- Time management and organisation
+- Attention to detail
+
+---
+
 ### 💼 Student Assistant
 **North-West University**  
-*Aug 2024 – Nov 2024*
+**Aug 2024 – Nov 2024**
 
-Responsibilities:
+**Responsibilities**
 - Assisted students with study skills and academic support
 - Facilitated test and exam preparation sessions
 - Enhanced communication between lecturers and students
@@ -72,7 +99,7 @@ Responsibilities:
 
 ### 💼 Digital Marketing Skills Training Program
 **Datacomb**  
-*May 2024 – Sep 2024*
+**May 2024 – Sep 2024**
 
 Participated in professional skills development and digital marketing training.
 
@@ -84,7 +111,7 @@ Participated in professional skills development and digital marketing training.
 
 A Linux-based router configured using **Ubuntu** and **VirtualBox**, designed to provide essential routing services between virtual machines.
 
-#### Features
+**Features**
 - Network Address Translation (NAT)
 - DHCP server configuration
 - Firewall setup using `iptables`
@@ -92,7 +119,7 @@ A Linux-based router configured using **Ubuntu** and **VirtualBox**, designed to
 - Secure file transfer between client and router
 - Virtual network simulation using Ubuntu and Kali Linux
 
-#### Technologies Used
+**Technologies Used**
 - Ubuntu Linux
 - Kali Linux
 - VirtualBox
@@ -107,7 +134,7 @@ A Linux-based router configured using **Ubuntu** and **VirtualBox**, designed to
 
 A full-stack web application for managing salon operations efficiently.
 
-#### Features
+**Features**
 - Client management
 - Appointment scheduling
 - Service management
@@ -119,7 +146,7 @@ A full-stack web application for managing salon operations efficiently.
 - Authentication and authorization
 - Dashboard analytics
 
-#### Technologies Used
+**Technologies Used**
 - React.js
 - Material UI
 - Node.js
@@ -134,7 +161,7 @@ A full-stack web application for managing salon operations efficiently.
 
 A web-based platform designed to streamline solar installation services.
 
-#### Features
+**Features**
 - Appointment booking
 - Quote requests
 - Project progress tracking
@@ -146,7 +173,7 @@ A web-based platform designed to streamline solar installation services.
 
 A database-driven vehicle rental management platform designed to modernize rental operations.
 
-#### Features
+**Features**
 - Vehicle inventory management
 - Booking management
 - Customer records
@@ -158,7 +185,7 @@ A database-driven vehicle rental management platform designed to modernize renta
 
 Developed a NoSQL business intelligence prototype using **MongoDB**, **Kafka**, and **Power BI**.
 
-#### Features
+**Features**
 - ETL process for cleaning and merging Excel data
 - Real-time data streaming using Kafka
 - Interactive sales dashboards
@@ -175,7 +202,6 @@ Developed a NoSQL business intelligence prototype using **MongoDB**, **Kafka**, 
 - C++
 - SQL
 - NoSQL
-  
 
 ### Databases
 - MySQL
@@ -210,7 +236,6 @@ Developed a NoSQL business intelligence prototype using **MongoDB**, **Kafka**, 
 - Git
 - GitHub
 - Visual Studio
-- vs code
 - BlueJ
 - VirtualBox
 - Microsoft Word
@@ -242,10 +267,10 @@ Developed a NoSQL business intelligence prototype using **MongoDB**, **Kafka**, 
 
 ## Contact
 
-- **GitHub**: [@Moroka21](https://github.com/Moroka21)
-- **Portfolio Website**: https://moroka21.github.io/online-resume
-- **Email**: moroamofo11@gmail.com
-- **Phone**: 0649048091
+- **GitHub:** [@Moroka21](https://github.com/Moroka21)
+- **Portfolio Website:** https://moroka21.github.io/online-resume
+- **Email:** moroamofo11@gmail.com
+- **Phone:** 0649048091
 
 ---
 
