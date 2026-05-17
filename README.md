@@ -26,14 +26,14 @@ I have a strong foundation in **programming, databases, data analysis, informati
 **University of Limpopo**  
 **2026 – Present**
 
-**Relevant Coursework**
+Relevant coursework:
 - Artificial Intelligence
 - Databases
 - Computer Networks
 - Computer Security
 
-**Research Project**  
-Investigating Data Poisoning Attacks on AI-Driven Intrusion Detection Systems in Crime Intelligence Applications.
+**Research Project:**  
+Investigating Data Poisoning Attacks on AI-Driven Intrusion Detection Systems in Crime Intelligence Applications
 
 ---
 
@@ -41,7 +41,7 @@ Investigating Data Poisoning Attacks on AI-Driven Intrusion Detection Systems in
 **North-West University**  
 **2023 – 2025**
 
-**Relevant Coursework**
+Relevant coursework:
 - Structured Programming
 - Object-Oriented Programming
 - Data Structures and Algorithms
@@ -61,26 +61,13 @@ Investigating Data Poisoning Attacks on AI-Driven Intrusion Detection Systems in
 **Department of Computer Science, University of Limpopo**  
 **2026 – Present**
 
-Supporting the effective operation and management of university computer laboratories while assisting students with technical and software-related issues.
-
-**Responsibilities**
 - Assist students with technical computer-related problems
-- Support management of computer laboratories alongside Senior Lab Assistants
-- Assist with technical maintenance and troubleshooting of laboratory equipment
-- Report and document computer-related faults and incidents
-- Safeguard laboratory equipment and peripherals
-- Enforce computer laboratory policies and rules
-- Monitor laboratory usage and ensure proper functionality
-- Provide assistance during practical lessons, tutorials, and assessments
-
-**Skills Applied**
-- Computer hardware and software troubleshooting
-- Microsoft Office applications
-- C++
-- Java
-- Communication and interpersonal skills
-- Time management and organisation
-- Attention to detail
+- Support management of university computer laboratories
+- Troubleshoot hardware and software issues
+- Report and document computer-related faults
+- Safeguard laboratory equipment
+- Enforce lab policies and monitor usage
+- Assist during practical lessons and assessments
 
 ---
 
@@ -88,12 +75,10 @@ Supporting the effective operation and management of university computer laborat
 **North-West University**  
 **Aug 2024 – Nov 2024**
 
-**Responsibilities**
 - Assisted students with study skills and academic support
 - Facilitated test and exam preparation sessions
 - Enhanced communication between lecturers and students
 - Supported digital literacy development
-- Directed students to appropriate university technical support services
 
 ---
 
@@ -108,94 +93,57 @@ Participated in professional skills development and digital marketing training.
 ## Projects
 
 ### 🔀 Linux Router Project
-
-A Linux-based router configured using **Ubuntu** and **VirtualBox**, designed to provide essential routing services between virtual machines.
-
-**Features**
-- Network Address Translation (NAT)
-- DHCP server configuration
-- Firewall setup using `iptables`
-- IP forwarding and packet routing
-- Secure file transfer between client and router
-- Virtual network simulation using Ubuntu and Kali Linux
-
-**Technologies Used**
-- Ubuntu Linux
-- Kali Linux
-- VirtualBox
-- Bash scripting
-- iptables
+A Linux-based router configured using Ubuntu and VirtualBox with:
+- NAT
 - DHCP
-- SSH / SCP
+- Firewall (`iptables`)
+- IP forwarding
+- Secure file transfer
+
+**Tech:** Ubuntu, Kali Linux, VirtualBox, Bash, SSH
 
 ---
 
 ### 💇 Salon Management System
-
-A full-stack web application for managing salon operations efficiently.
-
-**Features**
-- Client management
+A full-stack salon management platform featuring:
 - Appointment scheduling
-- Service management
-- Staff management
-- Payment processing
-- Invoice generation
+- Client management
+- Payments & invoicing
 - Inventory tracking
-- Supplier management
-- Authentication and authorization
-- Dashboard analytics
+- Authentication
 
-**Technologies Used**
-- React.js
-- Material UI
-- Node.js
-- Express.js
-- MySQL
-- Sequelize ORM
-- JWT Authentication
+**Tech:** React, Node.js, Express, MySQL, Sequelize
 
 ---
 
 ### ☀️ Solar Tech Solutions
-
-A web-based platform designed to streamline solar installation services.
-
-**Features**
+A web-based platform for:
 - Appointment booking
 - Quote requests
 - Project progress tracking
-- Customer dashboard
 
 ---
 
 ### 🚗 ABCRental Vehicle Management System
-
-A database-driven vehicle rental management platform designed to modernize rental operations.
-
-**Features**
-- Vehicle inventory management
-- Booking management
+A database-driven vehicle rental platform for:
+- Fleet management
 - Customer records
-- Automated data handling
+- Booking automation
 
 ---
 
 ### 📊 ClearVue Ltd – Business Intelligence System
-
-Developed a NoSQL business intelligence prototype using **MongoDB**, **Kafka**, and **Power BI**.
-
-**Features**
-- ETL process for cleaning and merging Excel data
-- Real-time data streaming using Kafka
-- Interactive sales dashboards
-- Custom financial year reporting
+NoSQL BI prototype using:
+- MongoDB
+- Kafka
+- Power BI
+- ETL pipelines
 
 ---
 
 ## Technical Skills
 
-### Programming Languages
+### Programming
 - Python
 - Java
 - C#
@@ -209,16 +157,17 @@ Developed a NoSQL business intelligence prototype using **MongoDB**, **Kafka**, 
 - Oracle
 
 ### Web Development
+- HTML
+- CSS
 - React.js
 - Node.js
 - Express.js
-- Material UI
 
 ### Networking & Systems
 - Linux Administration
 - Router Configuration
 - NAT & DHCP
-- Firewall Management (`iptables`)
+- Firewall Management
 - SSH / SCP
 
 ### Security
@@ -226,49 +175,30 @@ Developed a NoSQL business intelligence prototype using **MongoDB**, **Kafka**, 
 - Intrusion Detection Systems
 - Cybersecurity Research
 
-### Data & Analytics
-- Power BI
-- Kafka
-- Data Analytics
-- ETL Processes
-
-### Tools & Platforms
+### Tools
 - Git
 - GitHub
 - Visual Studio
 - BlueJ
 - VirtualBox
-- Microsoft Word
-- Excel
-- PowerPoint
+- Power BI
+- Kafka
 
 ---
 
 ## Certifications
 
-- Google Cybersecurity Certificate – **Foundations of Cybersecurity**
-- Google Cybersecurity Certificate – **Connect and Protect: Networks and Network Security**
-- Google Cybersecurity Certificate – **Play It Safe: Manage Security Risks**
-- Google Cybersecurity Certificate – **Tools of the Trade: Linux and SQL**
-
----
-
-## Core Competencies
-
-- Problem Solving
-- Team Collaboration
-- Effective Communication
-- Time Management
-- Attention to Detail
-- Adaptability
-- Continuous Learning
+- Foundations of Cybersecurity (Google)
+- Connect and Protect: Networks and Network Security (Google)
+- Play It Safe: Manage Security Risks (Google)
+- Tools of the Trade: Linux and SQL (Google)
 
 ---
 
 ## Contact
 
-- **GitHub:** [@Moroka21](https://github.com/Moroka21)
-- **Portfolio Website:** https://moroka21.github.io/online-resume
+- **GitHub:** https://github.com/Moroka21
+- **Portfolio:** https://moroka21.github.io/online-resume
 - **Email:** moroamofo11@gmail.com
 - **Phone:** 0649048091
 
